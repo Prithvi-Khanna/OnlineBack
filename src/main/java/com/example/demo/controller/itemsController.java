@@ -27,7 +27,7 @@ public class itemsController {
     @GetMapping("/search/{description}")
     public List<items> search(@PathVariable (value = "description") String description)
     {
-        return ItemsRepo.findAllByDescriptionContaining(description);
+        return ItemsRepo.findAllByCategory(description);
     }
     @GetMapping("/get_name/{name}")
     public List<items> getItem2(@PathVariable( value = "name") String name)
